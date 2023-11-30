@@ -13,21 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/about', 'About@halaman_about');
-Route::get('/create', 'Create@halaman_create');
-Route::get('/update', 'Update@halaman_update');
-Route::get('/delete', 'Delete@halaman_delete');
 
 Auth::Routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'Index'])->name('home');
-Route::get('/home', 'HomeController@index');
-Route::get('/about', function (){
-    $data=[
-        'pageTitle' => 'Tentang Kami',
-        'Content' => 'Ini adalah halaman tentang Kami'
-    ];
-    return view ('about', $data);
-});
+Route::resource('/profile', 'App\Http\Controllers\ProfileController');
 
-Route::get('/produk', 'App\Http\Controller\ProdukController@index');
