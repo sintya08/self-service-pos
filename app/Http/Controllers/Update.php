@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class Update extends Controller
 {
     public function update(){
-        return view('uptade');
+        return view('update');
     }
 }
 

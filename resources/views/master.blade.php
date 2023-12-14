@@ -6,29 +6,28 @@
 <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
 <!-- Scripts -->
-@vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
 
 	<title>pos</title>
 </head>
 <body>
  
-	<header>
- 
-		<h2>MY PRODUK</h2>
+		<div class="container">
+			<div class="card">
+			<div class="card-body height:auto">
+		<h2 class="text-center">MY PRODUK</h2>
+		<hr>
 		<nav>
-			<a href="/create">HOME</a>
-			|
-			<a href="/read">READ</a>
-			|
+			<a href="/create"><button class="btn btn-primary">Create</button></a>
+			
+			<a href="/read"><button class="btn btn-primary">Read</button></a>
+			
 		</nav>
-	</header>
-	<hr/>
+		<hr>
+		
+
 	<br/>
 	<br/>
- 
-	<!-- bagian judul halaman blog -->
-	<h3> @yield('judul_halaman') </h3>
- 
  
 	<!-- bagian konten blog -->
 	@yield('konten')
@@ -36,10 +35,13 @@
  
 	<br/>
 	<br/>
-	<hr/>
+</div>
+</div>
 	<footer>
-		<p >&copy;<a href=#></a></p>
+		<p class="text-center">&copy;<a href=#>SintyaNatalia.2023</a></p>
 	</footer>
+
+</div>
  
 </body>
 </html>

@@ -14,10 +14,10 @@ class CreatePosTable extends Migration
     public function up()
     {
         Schema::create('pos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('username');
-            $table->string('email');
-            $table->integer('password');
+            $table->id();
+            $table->string('nama_barang');
+            $table->decimal('price', 10, 3); // Gunakan tipe data decimal untuk harga dengan 2 digit di belakang koma
+            $table->integer('stock');
             $table->timestamps();
         });
     }
