@@ -18,7 +18,7 @@
 		<h2 class="text-center">MY PRODUK</h2>
 		<hr>
 		<nav>
-			<a href="/create"><button class="btn btn-primary">Create</button></a>
+			<a href="/"><button class="btn btn-primary">Create</button></a>
 			
 			<a href="/read"><button class="btn btn-primary">Read</button></a>
 			

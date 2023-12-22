@@ -15,10 +15,11 @@ class CreatePosTable extends Migration
     {
         Schema::create('pos', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_barang');
+            $table->inser(`nama_barang`);
             $table->decimal('price', 10, 3); // Gunakan tipe data decimal untuk harga dengan 2 digit di belakang koma
             $table->integer('stock');
             $table->timestamps();
+
         });
     }
 
@@ -27,8 +28,9 @@ class CreatePosTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
+
     {
-        Schema::dropIfExists('pos');
+        Schema::dropIfExists('barangs');
     }
 }

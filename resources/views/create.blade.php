@@ -2,20 +2,21 @@
 @section('konten')
 
 <div class="form-group">
-<form action="/read" method="post">
+    <form method="POST" action="{{ url('/store') }}">
+
 
     {{ csrf_field() }}
-    <label for="nama">Nama Barang</label>
-    <input type="text" name="nama" id="name" class ="form-control"> </br>
+    <label for="nama_barang">Nama Barang</label>
+    <input type="text" name="nama_barang" id="nama_barang" class ="form-control"> </br>
 
 
-    <label for="email">Price</label>
-    <input type="email" name="email" id="email" class ="form-control"> </br>
+    <label for="price">Price</label>
+    <input type="price" name="price" id="price" class ="form-control"> </br>
 
-    <label for="Alamat">Stock</label>
-    <input type="alamat" name="alamat" id="alamat" class ="form-control"> </br>
+    <label for="stock">Stock</label>
+    <input type="stock" name="stock" id="stock" class ="form-control"> </br>
 
-    <input type="submit" value="Save" class="btn btn-success">
+    <input type="submit" value="Save" class="btn btn-success custom-width">
 </form>
 </div>
 @stop

@@ -17,8 +17,9 @@
             <td>Rp. {{ $barang->price }}</td>
             <td>{{ $barang->stock }}</td>
             <td>
-                <a class="btn btn-warning btn-sm text-white" href="/update">Update</a>
-                <a class="btn btn-danger btn-sm" href="/delete">Delete</a>
+                <a href="{{ url('/edit/'.$barang->id) }}"><button class="btn btn-warning">Edit</button></a>
+                        |
+                <a href="{{ url('/destroy/'.$barang->id) }}"><button class="btn btn-danger">Delete</button></a>
             </td>
         </tr>
         @endforeach
