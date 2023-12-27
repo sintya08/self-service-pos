@@ -27,6 +27,8 @@ Route::get('/edit/{id}', [PosController::class, 'edit']);
 Route::put('/update/{id}', [PosController::class, 'update']);
 Route::get('/destroy/{id}', [PosController::class, 'destroy']);
 
+
+
 // Route::get('/create', [Create::class, 'create']);
 // Route::get('/read', [Read::class, 'read']);
 // Route::get('/update', [Update::class, 'update']);
@@ -40,3 +42,11 @@ Route::get('/destroy/{id}', [PosController::class, 'destroy']);
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Auth::routes();
+
+Route::get('/login', ['LoginController'::class, 'index'])->name('login');
+Route::post('/actionlogin', ['LoginController'::class, 'actionlogin']);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
